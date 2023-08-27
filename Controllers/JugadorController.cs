@@ -31,12 +31,19 @@ namespace futbolperuano.Controllers
             objJugador.Monto = objJugador.Tiempo*300;
             double? igvTotal = objJugador.Monto*objJugador.IGV;
             objJugador.MontoTotal = objJugador.Monto+igvTotal;
-            
+            string? cadenaAsistencia;
+            if (objJugador.Asistencia=='A')//objJugador.Asistencia=true
+            {
+                cadenaAsistencia = "Asistió";
+            }else{//objJugador.Asistencia=false
+                cadenaAsistencia = "No asistió";
+            }
             
             ViewData["Message"] = string.Concat("Estimado " , objJugador.Nombre, " te estaremos contactando pronto.",
-                "\n\nEl monto es: S/. ", objJugador.Monto,
-                "\n\nIGV: "+igvTotal,
-                "\n\nMontoTotal: "+objJugador.MontoTotal);
+                " | El monto es: S/. ", objJugador.Monto,
+                " | IGV: "+igvTotal,
+                " | Asistencia: "+cadenaAsistencia,
+                " | MontoTotal: S/. "+objJugador.MontoTotal);
             return View("Index");
         }
     }

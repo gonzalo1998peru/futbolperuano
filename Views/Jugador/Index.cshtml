@@ -6,58 +6,104 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="text-center">
+<div class="">
     <form asp-controller="Jugador" asp-action="Create">
+        <div class="row">
 
-        <div class="form-group">
-        <label asp-for="Equipo">Equipo:</label>
-        <select asp-for="Equipo" class="form-control">
-        <option value="Universitario">Universitario</option>
-        <option value="Alianza Lima">Alianza Lima</option>
-        <option value="Cristal">Cristal</option>
-        <option value="Cienciano">Cienciano</option>
-        <option value="Sport Boys">Sport Boys</option>
-        <option value="Atlético Grau">Atlético Grau</option>
-        <option value="Alianza Atlético">Alianza Atlético</option>
-        <option value="Garcilaso">Garcilaso</option>
-        <option value="Binacional">Binacional</option></select>
+            <div class="col-6">
+                <div class="form group">
+                    <label asp-for="Equipo">Equipo:</label>
+                    <select asp-for="Equipo" class="form-control">
+                        <option value="Universitario">Universitario</option>
+                        <option value="Alianza Lima">Alianza Lima</option>
+                        <option value="Cristal">Cristal</option>
+                        <option value="Cienciano">Cienciano</option>
+                        <option value="Sport Boys">Sport Boys</option>
+                        <option value="Atlético Grau">Atlético Grau</option>
+                        <option value="Alianza Atlético">Alianza Atlético</option>
+                        <option value="Garcilaso">Garcilaso</option>
+                        <option value="Binacional">Binacional</option>
+                    </select>
+                </div>
+            </div>
+            <br/><br/>
+
+            <div class="col-6">
+                <div class="form group">
+                    <label asp-for="Nombre">Nombre:</label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+            </div>
+            <br/><br/>
+
+            <div class="col-6">
+                <div class="form group">
+                    <label asp-for="Categoria">Categoria:</label>
+                    <select asp-for="Categoria" class="form-control">
+                        <option value="Mayores">Mayores</option>
+                        <option value="Sub 17">Sub 17</option>
+                        <option value="Sub 20">Sub 20</option>
+                    </select>
+                </div>
+            </div>
+            <br/><br/>
+
+            <div class="col-6">
+                <div class="form group">
+                    <label asp-for="Tiempo">Tiempo:</label>
+                    <select asp-for="Tiempo" class="form-control">
+                        <option value="6">6 Meses</option>
+                        <option value="12">12 Meses</option>
+                        <option value="18">18 Meses</option>
+                        <option value="24">24 Meses</option>
+                    </select>
+                </div>
+            </div>
+            <br/><br/>
+
+            <div class="col-6"  >
+                <div class="form group">
+                    <label asp-for="Edad">Edad:</label>
+                    <input asp-for="Edad" class="form-control" />
+                </div>
+            </div>
+            <br/><br/>
+            
+            <div class="col-6">
+                <div class="form group">
+                    <label asp-for="Genero">Género:</label>
+                    <select asp-for="Genero" class="form-control">
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                </div>
+            </div>
+            <br/><br/>
+            
+            <div class="col-6">
+                <div class="form group">
+                    <label class="control-label" asp-for="Asistencia"></label><br />
+                    <div>
+                        <label class="form-check-inline" style="display: block;">
+                            <input class="form-check-input" asp-for="Asistencia" type="radio" value="A" checked>Asistió</label>
+                        </label>&ensp;
+                        <label class="form-check-inline" style="display: block;">
+                            <input class="form-check-input" asp-for="Asistencia" type="radio" value="I">No Asistió</label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br/><br/>
+            
+            <hr/>
+
+            <div class="col-6">
+                <div class="form group">
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
         </div>
-
-
-        <div class="form-group">
-            <label asp-for="Nombre">Nombre:</label>
-            <input asp-for="Nombre" class="form-control" />
-        </div>
-
-        <div class="form-group">
-        <label asp-for="Categoria">Categoria:</label>
-        <select asp-for="Categoria" class="form-control">
-        <option value="Mayores">Mayores</option>
-        <option value="Sub 17">Sub 17</option>
-        <option value="Sub 20">Sub 20</option></select>
-        </div>
-
-        <div class="form-group">
-        <label asp-for="Tiempo">Tiempo:</label>
-        <select asp-for="Tiempo" class="form-control">
-        <option value="6">6 Meses</option>
-        <option value="12">12 Meses</option>
-        <option value="18">18 Meses</option>
-        <option value="24">24 Meses</option></select>
-        </div>
-        <div class="form-group">
-            <label asp-for="Edad">Edad:</label>
-            <input asp-for="Edad" class="form-control" />
-        </div>
-
-        <div class="form-group">
-        <label asp-for="Genero">Género:</label>
-        <select asp-for="Genero" class="form-control">
-        <option value="M">Masculino</option>
-        <option value="F">Femenino</option> </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
     </form>
+
     <h1>@ViewData["Message"]</h1>
 </div>

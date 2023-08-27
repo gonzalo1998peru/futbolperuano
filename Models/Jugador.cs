@@ -8,7 +8,7 @@ namespace futbolperuano.Models
     public class Jugador
     {
         public string? Nombre { get; set;}
-
+        public char? Asistencia { get; set;}
         public string? Equipo { get; set;}
         public string? Categoria  { get; set;}
         public int? Tiempo { get; set;}
